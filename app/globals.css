@@ -98,7 +98,6 @@
 
 /* 
  public static void printMultiplicationTable(int n) {
-        // This nested loop results in an O(n^2) time complexity
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 System.out.print(i * j + "\t");
@@ -107,9 +106,15 @@
         }
     }
 
+     public static void printMultiplicationTable(int n) {
+        for (int i = 1; i <= n; i++) {     
+                System.out.print(i * j + "\t");
+        }
+    }
+
 
     public static int getElementAtIndex(int[] arr, int index) {
-        return arr[index]; // Direct access to the element
+        return arr[index]; 
     }
 
 
@@ -120,23 +125,24 @@
         while (left <= right) {
             int mid = left + (right - left) / 2; // Find the middle index
 
-            // Check if the target is present at mid
             if (arr[mid] == target) {
-                return mid; // Target found, return index
+                return mid;
             }
-
-            // If the target is greater, ignore the left half
             if (arr[mid] < target) {
                 left = mid + 1;
             } else {
-                // If the target is smaller, ignore the right half
                 right = mid - 1;
             }
         }
-
-        // Target not found
         return -1;
     }
+
+
+    def sum_array(arr):
+    total = 0
+    for num in arr:
+        total += num
+    return total
 
 */
 

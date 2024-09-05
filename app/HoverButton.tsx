@@ -13,7 +13,7 @@ export function HoverBorderGradientDemo() {
       className="bg-gradient-to-r py-4 px-10 text-white   from-[#001f3f] to-[#0191d8]  text-xl  flex items-center space-x-2"
     >
       <Link href='/dashboard'>
-      <span>Get Started</span>
+        <span>Get Started</span>
       </Link>
     </HoverBorderGradient>
   </div>  

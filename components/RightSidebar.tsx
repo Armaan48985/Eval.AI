@@ -9,7 +9,7 @@ const RightSidebar = ({setResult, inputCode} : any) => {
   const [customPrompt, setCustomPrompt] = useState<string>('')
 
   const sendCustomPrompt = async () => {
-        const data = await gen(customPrompt , inputCode)
+        const data = await gen(customPrompt + 'in very short' , inputCode)
 
         if(data){
           setResult(data)

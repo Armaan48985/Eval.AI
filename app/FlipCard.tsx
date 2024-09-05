@@ -1,6 +1,7 @@
 import { FlipWords } from "@/components/ui/flipcard";
 import React from "react";
 import { HoverBorderGradientDemo } from "./HoverButton";
+import Link from "next/link";
 
 
 export function FlipWordsDemo() {
@@ -16,7 +17,9 @@ export function FlipWordsDemo() {
       </div>
 
       <div className="">
-        <HoverBorderGradientDemo/>
+       
+          <HoverBorderGradientDemo/>
+     
       </div>
     </div>
   );
