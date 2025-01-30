@@ -205,7 +205,7 @@ Generate at least 5 test cases for the code given.
   };
   export const gen = async (prompt: string, inputCode: string): Promise<string> => {
     try {
-      const genAI = new GoogleGenerativeAI('AIzaSyBrqyF6ZD4qGEmjYsNkfQr6LtjFsM2aqXc');
+      const genAI = new GoogleGenerativeAI('AIzaSyD3MFtvYQmTNV7zY5DC87mK-jHsgLe2c_');
       const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
       const finalPrompt = `${prompt}\n${inputCode}`;
       const result = await model.generateContent(finalPrompt);
