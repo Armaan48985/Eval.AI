@@ -2,7 +2,6 @@
 import LeftNavbar from "@/components/LeftNavbar";
 import MonacoEditor from "@/components/MonacoEditor";
 import Navbar from "@/components/Navbar";
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import { useEffect, useState } from "react";
 import { Bar, Line, Pie } from 'react-chartjs-2';
 import {
@@ -96,15 +95,15 @@ export default function Dashboard() {
   }
   
   
-function getQueryParameter(name: string) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(name);
-}
+  function getQueryParameter(name: string) {
+    if (typeof window === "undefined") return null;
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+  
 
 const userInput = getQueryParameter('input');
 const extPrompt = getQueryParameter('prompt');
-
-console.log(extPrompt, inputCode)
 
 
 useEffect(() => {
